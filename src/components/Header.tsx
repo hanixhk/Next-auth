@@ -17,7 +17,7 @@ export default function Header() {
         <nav>
             <ul className='flex space-x-6'>
                 <Link href='/' className='hover:text-gray-300'>Home</Link>
-                <Link href='/About' className='hover:text-gray-300'>About</Link>
+                <Link href='/about' className='hover:text-gray-300'>About</Link>
             <SignedIn>
                 <UserButton/>
             </SignedIn>
