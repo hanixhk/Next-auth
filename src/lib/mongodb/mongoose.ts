@@ -22,7 +22,7 @@ export const connect = async () => {
     try {
         // Attempt to connect to MongoDB without deprecated options
         await mongoose.connect(mongoUri, {
-            dbName: "NextAuth"
+            dbName: "Next-Auth"
         });
         console.log('connected to mongodb');
         initialized = true;
