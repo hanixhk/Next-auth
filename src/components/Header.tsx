@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-
+import { SignInButton,SignedIn,SignedOut,SignOutButton, UserButton } from '@clerk/nextjs'
 export default function Header() {
   return (
     <header className="bg-gradient-to-r from-blue-300 to-purple-500 shadow-xl">
@@ -16,9 +16,15 @@ export default function Header() {
         </Link>
         <nav>
             <ul className='flex space-x-6'>
-                <li><Link href='/' className='hover:text-gray-300'>Home</Link></li>
-                <li><Link href='/sign-in' className='hover:text-gray-300'>Signin</Link></li>
-                <li><Link href='/About' className='hover:text-gray-300'>About</Link></li>
+                <Link href='/' className='hover:text-gray-300'>Home</Link>
+                <Link href='/About' className='hover:text-gray-300'>About</Link>
+            <SignedIn>
+                <UserButton/>
+            </SignedIn>
+            <SignedOut>
+                <SignInButton/>
+                
+            </SignedOut>
             </ul>
         </nav>
         
